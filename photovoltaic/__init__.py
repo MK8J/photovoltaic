@@ -10,6 +10,7 @@ degrees instead of radians.
 Temperature of 298.15 K (25 degC) not 300 K
 
 to do is listed as 9999
+Issues or the unknown correct documentation are labeled as ??
 
 The first line on all input files is ignored to allow for column headers
 # denotes a comment in input files and is ignored.
@@ -494,13 +495,13 @@ def ARCthick(wavelength, n1):
 
     inputs:
         wavelength: (same units as output thickness)
-
-        n1:
-            refractive index of material
+            The wavelength of the light
+        n1: (??)
+            The refractive index of material
 
     output:
         thickness: (same units as wavelength)
-            optimal thickness for a anti reflection coating.
+            The optimal thickness for a anti reflection coating.
     """
     return wavelength / (4 * n1)
 
@@ -511,9 +512,9 @@ def ARC_opt_n(n1, n2):
     film between two materals.
 
     input:
-        n1:
+        n1: (??)
             refractive index of the first material
-        n2:
+        n2: (??)
             refractive index of the second material
     '''
     return np.sqrt(n1 * n2)
@@ -525,11 +526,11 @@ def ARC_refl(wavelength, n0, n1, nSemi, thickness):
     for a dielectric layer of thickness at a given thickness.
 
     inputs:
-        n0:
+        n0: (??)
             refractive index of the "air"
-        n1:
+        n1: (??)
             refractive index of the dielectric layer 1
-        nSemi:
+        nSemi: (??)
             refractive index of the semiconductor
         thickness: (nm)
             thickness of the  dielectric layer
